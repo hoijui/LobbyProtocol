@@ -1859,6 +1859,100 @@
       </Examples>
     </Command>
 
+    <Command Name="PROPERTIESDEFINE" Source="client">
+      <Arguments>
+        <Argument Name="scope" Optional="no" Sentence="no">
+        Must be one of the scope names enlisted in Scopes.xml.
+        </Argument>
+        <Argument Name="key" Optional="no" Sentence="no">
+        The key/name of the property, has to match this regex: "[_0-9a-zA-Z]*"
+        </Argument>
+        <Argument Name="type" Optional="no" Sentence="no">
+        Must be one of: "int", "float", "bool", "string"
+        </Argument>
+        <Argument Name="description" Optional="no" Sentence="no">
+        A human readable description of this property.
+        </Argument>
+        <Argument Name="checkRegex" Optional="yes" Sentence="no">
+        May be used to check if a property value is valid (in addition to the type).
+        </Argument>
+      </Arguments>
+      <Description>
+      Lets the client define a single property.
+      </Description>
+      <Examples>
+        <Example>PROPERTIESDEFINE BATTLE numPlayers int "The number of players currently in game, including spectators and AIs" "[0-9]*"</Example>
+      </Examples>
+    </Command>
+
+    <Command Name="PROPERTIESSET" Source="client">
+      <Arguments>
+        <Argument Name="scope" Optional="no" Sentence="no">
+        Must be one of the scope names enlisted in Scopes.xml.
+        </Argument>
+        <Argument Name="keyValuePairs" Optional="no" Sentence="yes">
+        A list of property key-value pairs the client wants to set.
+        </Argument>
+      </Arguments>
+      <Description>
+      Set the values of a list of properties in a single scope.
+      </Description>
+      <Examples>
+        <Example>PROPERTIESSET BATTLE numPlayers="3" locked="true"</Example>
+      </Examples>
+    </Command>
+
+    <Command Name="PROPERTIESLISTEN" Source="client">
+      <Arguments>
+        <Argument Name="scope" Optional="no" Sentence="no">
+        Must be one of the scope names enlisted in Scopes.xml.
+        </Argument>
+        <Argument Name="keys" Optional="no" Sentence="yes">
+        A list of property-names the client is interested in.
+        </Argument>
+      </Arguments>
+      <Description>
+      Register for change notification on a list of properties in a single scope.
+      </Description>
+      <Examples>
+        <Example>PROPERTIESLISTEN BATTLE numPlayers locked</Example>
+      </Examples>
+    </Command>
+
+    <Command Name="PROPERTIESGET" Source="client">
+      <Arguments>
+        <Argument Name="scope" Optional="no" Sentence="no">
+        Must be one of the scope names enlisted in Scopes.xml.
+        </Argument>
+        <Argument Name="keys" Optional="no" Sentence="yes">
+        A list of property-names the client is interested in.
+        </Argument>
+      </Arguments>
+      <Description>
+      Get the current values of a list of properties in a single scope.
+      </Description>
+      <Examples>
+        <Example>PROPERTIESGET BATTLE numPlayers locked</Example>
+      </Examples>
+    </Command>
+
+    <Command Name="PROPERTIESVALUES" Source="server">
+      <Arguments>
+        <Argument Name="scope" Optional="no" Sentence="no">
+        Must be one of the scope names enlisted in Scopes.xml.
+        </Argument>
+        <Argument Name="keyValuePairs" Optional="no" Sentence="yes">
+        A list of property key-value pairs the client wants to set.
+        </Argument>
+      </Arguments>
+      <Description>
+      Sent as a response to a <clink name="PROPERTIESLISTEN"/> or a <clink name="PROPERTIESGET"/> command.
+      </Description>
+      <Examples>
+        <Example>PROPERTIESVALUES BATTLE numPlayers="3" locked="true"</Example>
+      </Examples>
+    </Command>
+
   </CommandList>
 
 </ProtocolDescription>
