@@ -1,0 +1,42 @@
+<as:CAM
+ xmlns:as="http://www.oasis-open.org/committees/cam"
+ xmlns:camed="http://jcam.org.uk/editor"
+ xmlns:xml="http://www.w3.org/XML/1998/namespace"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" CAMlevel="1" version="1.0">
+  <as:Header>
+    <as:Description>Generated for AllRootLevelTypeDefinitions  by XSD 2 CAM generator v1.91</as:Description>
+    <as:Owner>To be Completed</as:Owner>
+    <as:Version>0.1</as:Version>
+    <as:DateTime>2012-03-07T22:20:51</as:DateTime>
+  </as:Header>
+  <as:AssemblyStructure>
+    <as:Structure taxonomy="XML" ID="AllRootLevelTypeDefinitions" reference="">
+      <AllRootLevelTypeDefinitions>
+        <clink Name="%%">
+          <name>%string%</name>
+        </clink>
+        <clink>
+          <name>%string%</name>
+        </clink>
+        <clink>
+          <name>%string%</name>
+        </clink>
+      </AllRootLevelTypeDefinitions>
+    </as:Structure>
+  </as:AssemblyStructure>
+  <as:BusinessUseContext>
+    <as:Rules>
+      <as:default>
+        <as:context />
+      </as:default>
+    </as:Rules>
+  </as:BusinessUseContext>
+  <as:Extension name="uk.org.jcam.camed.extensions.StructureAnnotations">
+    <camed:annotation item="//clink/@Name">
+      <camed:documentation type="Definition">New Annotation</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="//AllRootLevelTypeDefinitions">
+      <camed:documentation type="Generated">Built by XSD 2 CAM -  1.91 - 2012-03-07T22:20:51.156+01:00</camed:documentation>
+    </camed:annotation>
+  </as:Extension>
+</as:CAM>
