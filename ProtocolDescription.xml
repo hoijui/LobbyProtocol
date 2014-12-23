@@ -316,20 +316,15 @@
       <p>
         This list explains the current compatibility flags a client may send
         with the <clink name="LOGIN:client"/> command.
-        This list will be emptied whenever a new protocol version gets released.
+        This list will be emptied whenever a new protocol version gets released.<br/>
+        <i>NOTE</i>
+        Some clients or servers may still use compat-flags from versions 0.36 and even 0.35,
+        most prominently: <b>a b m sd cl</b><br/>
+        This should not have happened, but it should not pose a problem in practise.
       </p>
     <ul>
-      <li><b>a</b>: account IDs sent in the <clink name="ADDUSER"/> command</li>
-      <li><b>b</b>: the battle authorization system
-        (<clink name="JOINBATTLEREQUEST"/>, <clink name="JOINBATTLEACCEPT"/>
-        and <clink name="JOINBATTLEDENY"/> commands)</li>
-      <li><b>m</b>: the basic match-making command
-        <clink name="FORCEJOINBATTLE:server"/></li>
-      <li><b>cu</b>: <clink name="CONNECTUSER:server"/> command (for decoupling games from battle-rooms)</li>
-      <li><b>sd</b>: SAYDATA* commands</li>
       <li><b>cl</b>:
         <ul>
-        <li>added CHANGEEMAIL</li>
         <li>added Engine Name / Engine Version to the <clink name="BATTLEOPENED:server" />/ <clink name="OPENBATTLE:client"/></li>
         <li>removed REQUESTUPDATEFILE, OFFERFILE, FORGEREVERSEMSG, USERID, GENERATEUSERID, ACQUIREUSERID</li>
         </ul>
@@ -395,6 +390,14 @@
     <i>Compatibility-Flags</i>
     <p>
     <ul>
+      <li><b>a</b>: account IDs sent in the <clink name="ADDUSER"/> command. DEPRECATED This is actually already part of 0.35</li>
+      <li><b>b</b>: the battle authorization system
+        (<clink name="JOINBATTLEREQUEST"/>, <clink name="JOINBATTLEACCEPT"/>
+        and <clink name="JOINBATTLEDENY"/> commands). DEPRECATED This is actually already part of 0.35</li>
+      <li><b>m</b>: the basic match-making command <clink name="FORCEJOINBATTLE:server"/></li>
+      <li><b>cu</b>: <clink name="CONNECTUSER:server"/> command (for decoupling games from battle-rooms)</li>
+      <li><b>sd</b>: SAYDATA* commands</li>
+      <li><b>cl</b>: added CHANGEEMAIL</li>
       <li><b>sp</b>: the scriptPassword parameter, sent in the <clink name="JOINEDBATTLE"/>command</li>
     </ul>
     </p>
