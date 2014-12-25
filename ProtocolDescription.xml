@@ -362,8 +362,9 @@
     <li>Added the SAYDATA* command set,
       see the <i>Inter-lobby-client data exchange</i>
       section in the beginning of this document.</li>
-    <li>An email address can now be associated with existing and set while registering an user account,
-      thereby enabling unassisted account recovery</li>
+    <li>An email address can now be associated with an existing account,
+      and it can be set while registering a new one,
+      thereby enabling account recovery without moderator interaction</li>
     <li>Added the <clink name="FORCEJOINBATTLE:client"/> client command.</li>
     <li>Added the <clink name="FORCEJOINBATTLE:server"/> server command.</li>
     <li>Added the <clink name="FORCEJOINBATTLEFAILED:server"/> server command.</li>
